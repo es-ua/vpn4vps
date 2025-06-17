@@ -1,0 +1,14 @@
+version: '3'
+services:
+  openvpn:
+    image: alekslitvinenk/openvpn
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "1194:1194/udp"
+      - "1080:8080/tcp"
+    devices:
+      - /dev/net/tun
+    environment:
+      HOST_ADDR: $(curl -s https://api.ipify.org)
+    restart: always
