@@ -1,1 +1,2 @@
-Docker compose file for 🔐DockOvpn
+Docker compose file for 🔐DockOvpn (https://github.com/dockovpn/dockovpn)
+
